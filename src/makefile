@@ -1,8 +1,14 @@
-.PHONY: clean
+.PHONY = main clean
 
-main:
-	# Compiling the compiler :)
+CC = ./coolc.sh
+
+SRCS := $(wildcard ./Tests/*.cl)
+BINS := $(SRCS:%.cl=%)
+
+main: ${BINS}
+
+%: %.cl
+	${CC} ${FILE} $<
 
 clean:
-	rm -rf build/*
-
+	rm -rf ./Tests/*.mips

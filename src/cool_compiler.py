@@ -52,7 +52,7 @@ class Compiler:
 
     def compile(self, file_name):
         print("The_Coolest v1.0")
-        print("The_Coolest copyright")
+        print("Copyright (c) 2019: Lauren, Marcel, Arlenis")
 
         file = None
         try: 
